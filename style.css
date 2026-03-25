@@ -121,16 +121,46 @@ h2 em {
   background: var(--forest);
 }
 
+/* 배경 이미지 — Ken Burns 줌 */
 .hero-bg {
+  position: absolute;
+  inset: -6%;
+  background-image: url('https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center 40%;
+  animation: kenburns 18s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes kenburns {
+  from { transform: scale(1.0) translateX(0); }
+  to   { transform: scale(1.08) translateX(-1%); }
+}
+
+/* 다층 오버레이 — 가독성 + 분위기 */
+.hero-bg::after {
+  content: '';
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 50% 40%, rgba(74,122,82,.35) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 50% at 80% 20%, rgba(90,158,78,.2) 0%, transparent 60%);
-  /* Subtle noise texture via SVG data URI */
-  background-image:
-    radial-gradient(ellipse 80% 60% at 50% 40%, rgba(74,122,82,.35) 0%, transparent 70%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    /* 상단 어둠 — eyebrow 가독성 */
+    linear-gradient(to bottom,
+      rgba(8, 22, 12, 0.70) 0%,
+      rgba(8, 22, 12, 0.30) 30%,
+      rgba(8, 22, 12, 0.20) 55%,
+      rgba(8, 22, 12, 0.60) 80%,
+      rgba(8, 22, 12, 0.90) 100%
+    ),
+    /* 사이드 비네트 */
+    radial-gradient(ellipse 90% 80% at 50% 50%,
+      transparent 40%,
+      rgba(4, 14, 8, 0.45) 100%
+    ),
+    /* 컬러 워시 — 포레스트 그린 톤 유지 */
+    linear-gradient(160deg,
+      rgba(10, 35, 18, 0.35) 0%,
+      rgba(6, 20, 12, 0.50) 100%
+    );
 }
 
 .hero-inner {
@@ -138,16 +168,17 @@ h2 em {
   z-index: 2;
   text-align: center;
   padding: 40px 28px 80px;
-  max-width: 700px;
+  max-width: 680px;
 }
 
 .hero-eyebrow {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  color: rgba(255,255,255,.5);
+  color: rgba(255, 255, 255, 0.55);
   margin-bottom: 28px;
+  text-shadow: 0 1px 8px rgba(0,0,0,.4);
 }
 
 .hero-title {
@@ -155,72 +186,85 @@ h2 em {
   font-size: clamp(3rem, 9vw, 6rem);
   font-weight: 700;
   color: var(--white);
-  line-height: 1.1;
+  line-height: 1.08;
   letter-spacing: -2px;
   margin-bottom: 28px;
+  text-shadow:
+    0 2px 20px rgba(0, 0, 0, 0.5),
+    0 4px 48px rgba(0, 0, 0, 0.3);
 }
 
 .hero-title em {
   font-style: normal;
-  color: rgba(255,255,255,.55);
+  color: rgba(255, 255, 255, 0.5);
   display: block;
-  font-size: .55em;
-  letter-spacing: 0px;
-  margin-top: 8px;
+  font-size: .48em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-top: 14px;
+  text-shadow: none;
 }
 
 .hero-desc {
-  font-size: 1.05rem;
-  color: rgba(255,255,255,.72);
-  line-height: 1.9;
-  margin-bottom: 40px;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 2;
+  margin-bottom: 44px;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.5);
 }
 
 .hero-desc strong {
-  color: rgba(255,255,255,.95);
-  font-weight: 600;
+  color: rgba(255, 255, 255, 0.98);
+  font-weight: 700;
 }
 
 .hero-cta {
   display: inline-block;
-  background: var(--white);
+  background: rgba(255, 255, 255, 0.95);
   color: var(--forest);
   font-family: var(--sans);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
-  padding: 16px 44px;
+  padding: 16px 48px;
   border-radius: 50px;
   text-decoration: none;
-  letter-spacing: .3px;
-  box-shadow: 0 8px 28px rgba(0,0,0,.25);
-  transition: transform .2s, box-shadow .2s;
+  letter-spacing: .5px;
+  backdrop-filter: blur(8px);
+  box-shadow:
+    0 8px 28px rgba(0, 0, 0, 0.35),
+    0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform .22s, box-shadow .22s, background .15s;
 }
 
 .hero-cta:hover {
+  background: var(--white);
   transform: translateY(-3px);
-  box-shadow: 0 14px 36px rgba(0,0,0,.3);
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.4),
+    0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .hero-scroll-hint {
   position: absolute;
-  bottom: 130px;
+  bottom: 132px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 10px;
-  letter-spacing: 3px;
+  font-size: 9px;
+  letter-spacing: 3.5px;
   text-transform: uppercase;
-  color: rgba(255,255,255,.3);
-  z-index: 2;
-  animation: bounce 2s ease-in-out infinite;
+  color: rgba(255,255,255,.35);
+  z-index: 3;
+  text-shadow: 0 1px 6px rgba(0,0,0,.4);
+  animation: bounce 2.4s ease-in-out infinite;
 }
 
 .hero-scroll-hint::after {
   content: '';
   display: block;
   width: 1px;
-  height: 36px;
-  background: rgba(255,255,255,.2);
-  margin: 8px auto 0;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(255,255,255,.35), transparent);
+  margin: 10px auto 0;
 }
 
 @keyframes bounce {
@@ -235,11 +279,13 @@ h2 em {
   right: 0;
   z-index: 3;
   line-height: 0;
+  pointer-events: none;
 }
 
 .hero-wave svg {
   width: 100%;
-  height: 120px;
+  height: 100px;
+  display: block;
 }
 
 /* ─────────────────────────────────────────
