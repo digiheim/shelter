@@ -5,287 +5,375 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>양평 비룡리 588 | 체류형 쉼터 농지</title>
   <meta name="description" content="경기도 양평군 청운면 비룡리 588 · 계획관리지역 · 전(田) · 128평 · 5,500만원" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Hero -->
+  <!-- ① Hero -->
   <header class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content container">
-      <span class="badge">🌿 체류형 쉼터 농지</span>
-      <h1>양평 비룡리 588</h1>
-      <p class="hero-sub">이 땅, 그냥 농지일까요?<br><strong>아닙니다. 쉼이 되는 공간으로 바뀔 수 있습니다.</strong></p>
-      <a href="#contact" class="btn-primary">문의하기</a>
+    <div class="hero-bg"></div>
+    <div class="hero-inner">
+      <p class="hero-eyebrow">경기도 양평군 청운면 · 계획관리지역</p>
+      <h1 class="hero-title">비룡리 588<br><em>쉼이 되는 땅</em></h1>
+      <p class="hero-desc">이 땅, 그냥 농지일까요?<br>아닙니다. <strong>작게 시작해 가치를 만드는 땅입니다.</strong></p>
+      <a href="#contact" class="hero-cta">문의하기</a>
+    </div>
+    <div class="hero-scroll-hint">scroll</div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,60 C240,110 480,20 720,70 C960,120 1200,30 1440,65 L1440,120 L0,120 Z" fill="#f7f3ec"/>
+      </svg>
     </div>
   </header>
 
-  <!-- 목차 -->
-  <nav class="toc">
-    <div class="container">
-      <ul>
-        <li><a href="#info">기본 정보</a></li>
-        <li><a href="#message">핵심 메시지</a></li>
-        <li><a href="#opportunity">현실 조건 &amp; 기회</a></li>
-        <li><a href="#scenarios">활용 시나리오</a></li>
-        <li><a href="#environment">환경 가치</a></li>
-        <li><a href="#price">가격 포인트</a></li>
-        <li><a href="#target">추천 대상</a></li>
-        <li><a href="#contact">문의 안내</a></li>
+  <!-- ② 스티키 네비 -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <span class="nav-logo">비룡리 588</span>
+      <ul class="nav-links">
+        <li><a href="#info">기본정보</a></li>
+        <li><a href="#opportunity">기회</a></li>
+        <li><a href="#scenarios">활용</a></li>
+        <li><a href="#environment">환경</a></li>
+        <li><a href="#price">가격</a></li>
+        <li><a href="#target">대상</a></li>
       </ul>
+      <a href="#contact" class="nav-cta">문의</a>
     </div>
   </nav>
 
-  <main class="container">
-
-    <!-- 기본 정보 -->
-    <section id="info" class="section">
-      <div class="section-label">📍 기본 정보</div>
-      <div class="info-table-wrap">
-        <table class="info-table">
-          <tbody>
-            <tr>
-              <th>위치</th>
-              <td>경기도 양평군 청운면 비룡리 588</td>
-            </tr>
-            <tr>
-              <th>지역지구</th>
-              <td>계획관리지역</td>
-            </tr>
-            <tr>
-              <th>면적</th>
-              <td>128평 (약 423㎡)</td>
-            </tr>
-            <tr>
-              <th>지목</th>
-              <td>전 (田)</td>
-            </tr>
-            <tr>
-              <th>매매가</th>
-              <td class="price-cell">5,500만원 <span class="price-sub">(평당 약 43만원)</span></td>
-            </tr>
-          </tbody>
-        </table>
+  <!-- ③ 기본 정보 -->
+  <section id="info" class="section section-cream" data-animate>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">기본 정보</span>
+        <h2>이 땅에 대하여</h2>
       </div>
-    </section>
-
-    <!-- 핵심 메시지 -->
-    <section id="message" class="section">
-      <div class="section-label">💬 핵심 메시지</div>
-      <blockquote class="key-message">
-        "크게 개발하는 땅이 아니라<br><strong>작게 시작해 가치를 만드는 땅입니다</strong>"
-      </blockquote>
-      <p class="message-sub">지금은 비어있는 땅이지만, 이 공간은 이렇게 바뀔 수 있습니다 →</p>
-    </section>
-
-    <!-- 현실 조건 & 기회 -->
-    <section id="opportunity" class="section">
-      <div class="section-label">🚧 현실 조건 &amp; 기회</div>
-
-      <div class="two-col">
-        <div class="card card-warning">
-          <h3>현재 상황</h3>
-          <ul class="check-list">
-            <li class="no">현재 진입로 없음</li>
-            <li class="yes">하천점용 허가 시 접근 가능</li>
-            <li class="yes">대부분 여기서 포기합니다 → <strong>그래서 기회입니다</strong></li>
-          </ul>
+      <div class="info-stats">
+        <div class="stat">
+          <span class="stat-label">위치</span>
+          <span class="stat-value small">경기도 양평군<br>청운면 비룡리 588</span>
         </div>
+        <div class="stat">
+          <span class="stat-label">지목</span>
+          <span class="stat-value">전 (田)</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">면적</span>
+          <span class="stat-value">128평</span>
+          <span class="stat-sub">약 423㎡</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">지역지구</span>
+          <span class="stat-value small">계획관리지역</span>
+        </div>
+        <div class="stat stat-price">
+          <span class="stat-label">매매가</span>
+          <span class="stat-value">5,500<span class="stat-unit">만원</span></span>
+          <span class="stat-sub">평당 약 43만원</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="card card-opportunity">
-          <h3>왜 기회인가?</h3>
-          <div class="opp-table">
-            <div class="opp-row">
-              <span class="opp-cond">진입로 미확보</span>
-              <span class="opp-desc">하천점용 허가로 해결 가능. 허가 절차는 공인중개사와 함께 진행</span>
+  <!-- ④ 핵심 메시지 -->
+  <section class="section-quote" data-animate>
+    <div class="wrap">
+      <blockquote class="pull-quote">
+        <span class="quote-mark">"</span>
+        크게 개발하는 땅이 아니라<br>
+        <strong>작게 시작해 가치를 만드는 땅입니다</strong>
+        <span class="quote-mark close">"</span>
+      </blockquote>
+      <p class="quote-sub">지금은 비어있는 땅이지만, 이 공간은 이렇게 바뀔 수 있습니다</p>
+    </div>
+  </section>
+
+  <!-- ⑤ 현실 조건 & 기회 -->
+  <section id="opportunity" class="section section-dark" data-animate>
+    <div class="wrap">
+      <div class="section-head light">
+        <span class="eyebrow">현실 조건 &amp; 기회</span>
+        <h2>대부분 여기서 포기합니다<br><em>그래서 기회입니다</em></h2>
+      </div>
+      <div class="opp-layout">
+        <div class="opp-left">
+          <div class="opp-status">
+            <div class="status-row no">
+              <span class="status-dot"></span>
+              <div>
+                <strong>현재 진입로 없음</strong>
+                <p>일반적인 접근이 불가한 상태</p>
+              </div>
             </div>
-            <div class="opp-row">
-              <span class="opp-cond">하천 인접</span>
-              <span class="opp-desc">자연 경관 우수, 체류형 쉼터로서의 감성 가치 높음</span>
+            <div class="status-row yes">
+              <span class="status-dot"></span>
+              <div>
+                <strong>하천점용 허가로 해결 가능</strong>
+                <p>공인중개사와 함께 진행하는 허가 절차</p>
+              </div>
             </div>
-            <div class="opp-row">
-              <span class="opp-cond">계획관리지역</span>
-              <span class="opp-desc">농막·소형 건축물 등 법적 범위 내 소형 개발 가능</span>
+            <div class="status-row yes">
+              <span class="status-dot"></span>
+              <div>
+                <strong>허가 후 완전한 접근 확보</strong>
+                <p>조건만 해소되면 활용 가능성 대폭 확대</p>
+              </div>
             </div>
-            <div class="opp-row">
-              <span class="opp-cond">낮은 가격</span>
-              <span class="opp-desc">조건부 상황이 반영된 가격 → 개발 여력·시세 차익 모두 기대</span>
+          </div>
+        </div>
+        <div class="opp-right">
+          <div class="opp-items">
+            <div class="opp-item">
+              <span class="opp-num">01</span>
+              <div>
+                <strong>진입로 미확보 → 허가로 해결</strong>
+                <p>하천점용 허가 절차는 공인중개사와 함께 진행 가능합니다.</p>
+              </div>
+            </div>
+            <div class="opp-item">
+              <span class="opp-num">02</span>
+              <div>
+                <strong>하천 인접 → 감성 가치 상승</strong>
+                <p>자연 경관이 우수해 체류형 쉼터로서의 분위기 가치가 높습니다.</p>
+              </div>
+            </div>
+            <div class="opp-item">
+              <span class="opp-num">03</span>
+              <div>
+                <strong>계획관리지역 → 소형 개발 가능</strong>
+                <p>농막·소형 건축물 등 법적 범위 내에서 개발이 허용됩니다.</p>
+              </div>
+            </div>
+            <div class="opp-item">
+              <span class="opp-num">04</span>
+              <div>
+                <strong>조건부 가격 → 시세 차익 기대</strong>
+                <p>조건이 반영된 낮은 가격으로, 개발 여력과 시세 차익을 동시에 기대할 수 있습니다.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- 활용 시나리오 -->
-    <section id="scenarios" class="section">
-      <div class="section-label">🏡 활용 시나리오</div>
+  <!-- ⑥ 활용 시나리오 -->
+  <section id="scenarios" class="section section-cream" data-animate>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">활용 시나리오</span>
+        <h2>이 공간으로<br>무엇을 할 수 있을까요</h2>
+      </div>
       <div class="scenario-grid">
-
-        <div class="scenario-card">
-          <div class="scenario-icon">🌲</div>
+        <article class="scenario-card">
+          <div class="scenario-num">01</div>
+          <div class="scenario-icon-wrap">🌲</div>
           <h3>감성 쉼터</h3>
           <ul>
-            <li>🌲 숲속 작은 집</li>
-            <li>🛋️ 주말 휴식 공간</li>
-            <li>🏠 세컨하우스</li>
+            <li>숲속 작은 집</li>
+            <li>주말 휴식 공간</li>
+            <li>세컨하우스</li>
           </ul>
-          <p>주말마다 달려오고 싶은 나만의 힐링 공간. 소형 농막이나 목조 건축물로 아늑한 세컨하우스를 만들 수 있습니다.</p>
-        </div>
-
-        <div class="scenario-card">
-          <div class="scenario-icon">⛺</div>
+          <p>소형 농막이나 목조 건축물로 아늑한 세컨하우스를 만들 수 있습니다. 주말마다 달려오고 싶은 나만의 힐링 공간.</p>
+        </article>
+        <article class="scenario-card">
+          <div class="scenario-num">02</div>
+          <div class="scenario-icon-wrap">⛺</div>
           <h3>소형 투자</h3>
           <ul>
-            <li>⛺ 캠핑형 공간 (글램핑·캠핑장)</li>
-            <li>🌱 텃밭 + 쉼터 복합 운영</li>
+            <li>글램핑·캠핑장</li>
+            <li>텃밭 + 쉼터 복합</li>
           </ul>
           <p>글램핑 형태로 운영하거나 텃밭·쉼터를 결합한 소형 체험 공간으로 수익화가 가능합니다.</p>
-        </div>
-
-        <div class="scenario-card">
-          <div class="scenario-icon">📸</div>
+        </article>
+        <article class="scenario-card">
+          <div class="scenario-num">03</div>
+          <div class="scenario-icon-wrap">📸</div>
           <h3>콘텐츠 공간</h3>
           <ul>
-            <li>📸 촬영 장소 (사진·영상)</li>
-            <li>🎨 감성 공간 운영 (팝업·소품샵 등)</li>
+            <li>사진·영상 촬영지</li>
+            <li>팝업·소품샵</li>
           </ul>
-          <p>SNS 콘텐츠 제작, 사진·영상 촬영지로 활용하거나 감성 팝업 운영 등 창의적인 공간 비즈니스가 가능합니다.</p>
+          <p>SNS 콘텐츠 제작, 감성 팝업 운영 등 창의적인 공간 비즈니스가 가능합니다.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑦ 환경 가치 -->
+  <section id="environment" class="section-env" data-animate>
+    <div class="wrap">
+      <div class="env-layout">
+        <div class="env-left">
+          <span class="eyebrow light">환경 가치</span>
+          <h2 class="env-title">자연이<br>곁에 있는 땅</h2>
         </div>
-
+        <div class="env-right">
+          <div class="env-tags">
+            <span class="env-tag">🌿 자연환경 우수</span>
+            <span class="env-tag">🔇 조용한 입지</span>
+            <span class="env-tag">💚 힐링 공간 적합</span>
+          </div>
+          <p class="env-desc">양평 청운면은 수도권에서 1~1.5시간 거리로, 자연과 가까우면서도 접근이 편리한 위치입니다. 하천과 인접한 조용한 자연환경 속에서, 도심의 소음과 완전히 단절된 쉼을 경험할 수 있습니다.</p>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- 환경 가치 -->
-    <section id="environment" class="section">
-      <div class="section-label">🌄 환경 가치</div>
-      <div class="env-grid">
-        <div class="env-item">🌿 자연환경 우수</div>
-        <div class="env-item">🔇 조용한 입지</div>
-        <div class="env-item">💚 힐링 공간 적합</div>
+  <!-- ⑧ 가격 포인트 -->
+  <section id="price" class="section section-white" data-animate>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">가격 포인트</span>
+        <h2>가격 대비<br>가능성이 있는 땅</h2>
       </div>
-      <p class="env-desc">양평 청운면은 수도권에서 1~1.5시간 거리로, 자연과 가까우면서도 접근이 편리한 위치입니다.</p>
-    </section>
+      <div class="price-hero">
+        <div class="price-hero-num">5,500<span>만원</span></div>
+        <div class="price-hero-meta">평당 약 43만원 &nbsp;·&nbsp; 128평 &nbsp;·&nbsp; 423㎡</div>
+      </div>
+      <div class="price-cards">
+        <div class="price-card">
+          <div class="price-card-icon">📉</div>
+          <strong>낮은 진입 장벽</strong>
+          <p>조건부 상황이 반영된 합리적 가격</p>
+        </div>
+        <div class="price-card">
+          <div class="price-card-icon">🏡</div>
+          <strong>소형 개발 가능</strong>
+          <p>계획관리지역, 농막·소형 건축물 활용</p>
+        </div>
+        <div class="price-card">
+          <div class="price-card-icon">📈</div>
+          <strong>장기 보유 가치</strong>
+          <p>양평 일대 세컨하우스 수요 지속 증가</p>
+        </div>
+        <div class="price-card">
+          <div class="price-card-icon">💡</div>
+          <strong>가능성 대비 가격</strong>
+          <p>지금은 비어있지만, 가능성은 이미 만들어진 땅</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- 가격 포인트 -->
-    <section id="price" class="section">
-      <div class="section-label">💰 가격 포인트</div>
-      <div class="price-highlight">
-        <div class="price-main">5,500만원</div>
-        <div class="price-detail">평당 약 43만원 · 128평 · 423㎡</div>
+  <!-- ⑨ 추천 대상 -->
+  <section id="target" class="section section-cream" data-animate>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">추천 대상</span>
+        <h2>이런 분께<br>딱 맞는 땅입니다</h2>
       </div>
-      <div class="price-grid">
-        <div class="price-item">
-          <span class="price-icon">📉</span>
+      <div class="target-list">
+        <div class="target-item">
+          <span class="target-num">🏡</span>
           <div>
-            <strong>낮은 진입 장벽</strong>
-            <p>조건부 상황이 반영된 합리적 가격</p>
+            <strong>세컨하우스를 찾는 분</strong>
+            <p>도시를 벗어난 나만의 두 번째 집을 꿈꾸는 분</p>
           </div>
         </div>
-        <div class="price-item">
-          <span class="price-icon">🏡</span>
+        <div class="target-item">
+          <span class="target-num">🌿</span>
           <div>
-            <strong>소형 개발 가능</strong>
-            <p>계획관리지역, 농막·소형 건축물 활용</p>
+            <strong>자연 속 쉼터를 원하는 분</strong>
+            <p>조용한 자연 속에서 재충전하고 싶은 분</p>
           </div>
         </div>
-        <div class="price-item">
-          <span class="price-icon">📈</span>
+        <div class="target-item">
+          <span class="target-num">💼</span>
           <div>
-            <strong>장기 보유 가치</strong>
-            <p>양평 일대 세컨하우스 수요 지속 증가</p>
+            <strong>소형 투자자</strong>
+            <p>적은 자본으로 알짜 토지 투자를 시작하려는 분</p>
           </div>
         </div>
-        <div class="price-item">
-          <span class="price-icon">💡</span>
+        <div class="target-item">
+          <span class="target-num">📸</span>
           <div>
-            <strong>가능성 대비 가격</strong>
-            <p>지금은 비어있지만, 가능성은 이미 만들어진 땅</p>
+            <strong>감성 공간 운영자</strong>
+            <p>SNS 감성 공간·촬영지·팝업 공간을 꿈꾸는 분</p>
           </div>
         </div>
       </div>
-      <p class="price-quote">"가격 대비 가능성이 있는 땅"</p>
-    </section>
+    </div>
+  </section>
 
-    <!-- 추천 대상 -->
-    <section id="target" class="section">
-      <div class="section-label">🎯 추천 대상</div>
-      <div class="target-grid">
-        <div class="target-card">
-          <div class="target-icon">🏡</div>
-          <strong>세컨하우스를 찾는 분</strong>
-          <p>도시를 벗어난 나만의 두 번째 집을 꿈꾸는 분</p>
-        </div>
-        <div class="target-card">
-          <div class="target-icon">🌿</div>
-          <strong>자연 속 쉼터를 원하는 분</strong>
-          <p>조용한 자연 속에서 재충전하고 싶은 분</p>
-        </div>
-        <div class="target-card">
-          <div class="target-icon">💼</div>
-          <strong>소형 투자자</strong>
-          <p>적은 자본으로 알짜 토지 투자를 시작하려는 분</p>
-        </div>
-        <div class="target-card">
-          <div class="target-icon">📸</div>
-          <strong>감성 공간 운영자</strong>
-          <p>SNS 감성 공간·촬영지·팝업 공간을 꿈꾸는 분</p>
-        </div>
+  <!-- ⑩ CTA -->
+  <section class="section-cta" data-animate>
+    <div class="wrap cta-wrap">
+      <p class="cta-label">이 땅은 지금은 아무것도 없지만</p>
+      <h2 class="cta-title">가능성은 이미<br>만들어져 있습니다</h2>
+      <p class="cta-sub">작은 공간이 삶의 방향을 바꿉니다.</p>
+      <a href="#contact" class="cta-btn">지금 문의하기</a>
+    </div>
+  </section>
+
+  <!-- ⑪ 문의 안내 -->
+  <section id="contact" class="section section-white" data-animate>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">문의 안내</span>
+        <h2>이렇게 연락 주세요</h2>
       </div>
-    </section>
-
-    <!-- 핵심 메시지 마무리 -->
-    <section class="section cta-section">
-      <div class="cta-inner">
-        <p class="cta-arrow">👉 이 땅은 지금은 아무것도 없지만</p>
-        <p class="cta-main"><strong>가능성은 이미 만들어져 있습니다</strong></p>
-        <p class="cta-sub">작은 공간이 삶의 방향을 바꿉니다.</p>
-        <a href="#contact" class="btn-primary">지금 문의하기</a>
-      </div>
-    </section>
-
-    <!-- 문의 안내 -->
-    <section id="contact" class="section">
-      <div class="section-label">📞 문의 안내</div>
-      <p class="contact-guide">이렇게 연락 주세요</p>
-      <p class="contact-message">"쉼터 가능할까요?" 한 문장으로 문의 주시면 빠르게 답변 드립니다.</p>
-      <div class="contact-cards">
-        <a href="tel:010-0000-0000" class="contact-card">
-          <span class="contact-icon">📞</span>
+      <p class="contact-tip">"쉼터 가능할까요?" — 한 문장으로 문의 주시면 빠르게 답변 드립니다.</p>
+      <div class="contact-row">
+        <a href="tel:010-0000-0000" class="contact-btn">
+          <span class="contact-btn-icon">📞</span>
           <div>
-            <strong>전화</strong>
-            <span>010-0000-0000</span>
+            <em>전화</em>
+            <strong>010-0000-0000</strong>
           </div>
         </a>
-        <a href="sms:010-0000-0000" class="contact-card">
-          <span class="contact-icon">💬</span>
+        <a href="sms:010-0000-0000" class="contact-btn">
+          <span class="contact-btn-icon">💬</span>
           <div>
-            <strong>문자</strong>
-            <span>010-0000-0000</span>
+            <em>문자</em>
+            <strong>010-0000-0000</strong>
           </div>
         </a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- 안내사항 -->
-    <section class="section notice-section">
-      <div class="notice-box">
-        <h4>⚠️ 안내사항</h4>
-        <ul>
-          <li>본 페이지의 이미지는 참고용이며, 실제 현장 사진은 문의 시 제공됩니다.</li>
-          <li>진입로(하천점용) 관련 허가 절차는 공인중개사와 사전 협의가 필요합니다.</li>
-          <li>농지취득자격증명(농취증) 발급이 필요합니다.</li>
-          <li>투자에 따른 법적·세무 사항은 전문가 확인을 권장합니다.</li>
-        </ul>
-      </div>
-    </section>
-
-  </main>
+  <!-- ⑫ 안내사항 -->
+  <section class="section-notice">
+    <div class="wrap">
+      <ul class="notice-list">
+        <li>본 페이지의 이미지는 참고용이며, 실제 현장 사진은 문의 시 제공됩니다.</li>
+        <li>진입로(하천점용) 관련 허가 절차는 공인중개사와 사전 협의가 필요합니다.</li>
+        <li>농지취득자격증명(농취증) 발급이 필요합니다.</li>
+        <li>투자에 따른 법적·세무 사항은 전문가 확인을 권장합니다.</li>
+      </ul>
+    </div>
+  </section>
 
   <footer class="footer">
-    <div class="container">
-      경기도 양평군 청운면 비룡리 588 · 계획관리지역 · 전(田) · 423㎡
+    <div class="wrap footer-inner">
+      <span class="footer-logo">비룡리 588</span>
+      <span class="footer-meta">경기도 양평군 청운면 비룡리 588 · 계획관리지역 · 전(田) · 423㎡</span>
     </div>
   </footer>
+
+  <script>
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in-view');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+
+    // Sticky nav shadow on scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav-scrolled', window.scrollY > 60);
+    }, { passive: true });
+  </script>
 
 </body>
 </html>
