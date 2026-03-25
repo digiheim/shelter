@@ -140,17 +140,20 @@ h2 em {
 
 .slide.active { opacity: 1; }
 
-/* 각 슬라이드 이미지 + Ken Burns 방향 */
+/* 각 슬라이드 이미지 + Ken Burns 방향
+   ★ 실제 이미지 사용 시:
+     images/shelter-1.jpg, shelter-2.jpg, shelter-3.jpg 저장 후
+     url(...) 경로를 로컬 경로로 교체하세요 */
 .slide-1 {
-  background-image: url('images/shelter-1.jpg');
+  background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1920&q=85');
   animation: kb1 18s ease-in-out infinite alternate;
 }
 .slide-2 {
-  background-image: url('images/shelter-2.jpg');
+  background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=85');
   animation: kb2 18s ease-in-out infinite alternate;
 }
 .slide-3 {
-  background-image: url('images/shelter-3.jpg');
+  background-image: url('https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1920&q=85');
   animation: kb3 18s ease-in-out infinite alternate;
 }
 
