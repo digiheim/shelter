@@ -31,13 +31,32 @@
 
   <!-- ① Hero -->
   <header class="hero">
-    <div class="hero-bg"></div>
+
+    <!-- 슬라이드쇼 배경 -->
+    <div class="hero-slides">
+      <div class="slide slide-1 active"></div>
+      <div class="slide slide-2"></div>
+      <div class="slide slide-3"></div>
+    </div>
+
+    <!-- 공통 오버레이 -->
+    <div class="hero-overlay"></div>
+
+    <!-- 텍스트 콘텐츠 -->
     <div class="hero-inner">
       <p class="hero-eyebrow">경기도 양평군 청운면 · 계획관리지역</p>
       <h1 class="hero-title">비룡리 588<br><em>쉼이 되는 땅</em></h1>
       <p class="hero-desc">이 땅, 그냥 농지일까요?<br>아닙니다. <strong>작게 시작해 가치를 만드는 땅입니다.</strong></p>
       <a href="#contact" class="hero-cta">문의하기</a>
     </div>
+
+    <!-- 슬라이드 인디케이터 -->
+    <div class="hero-dots" aria-hidden="true">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
     <div class="hero-scroll-hint">scroll</div>
     <div class="hero-wave">
       <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
@@ -374,7 +393,32 @@
   </footer>
 
   <script>
-    // Scroll animations
+    // ── 슬라이드쇼 ──────────────────────────────
+    const slides = document.querySelectorAll('.hero-slides .slide');
+    const dots   = document.querySelectorAll('.hero-dots .dot');
+    let current  = 0;
+
+    function goTo(idx) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = (idx + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+    }
+
+    // 6초마다 자동 전환
+    let timer = setInterval(() => goTo(current + 1), 6000);
+
+    // 인디케이터 클릭
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        clearInterval(timer);
+        goTo(i);
+        timer = setInterval(() => goTo(current + 1), 6000);
+      });
+    });
+
+    // ── 스크롤 애니메이션 ────────────────────────
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
@@ -385,7 +429,7 @@
     }, { threshold: 0.08 });
     document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
 
-    // Sticky nav shadow on scroll
+    // ── 스티키 네비 ──────────────────────────────
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
       nav.classList.toggle('nav-scrolled', window.scrollY > 60);
