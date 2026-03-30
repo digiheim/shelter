@@ -497,6 +497,23 @@ h2 em {
 }
 
 /* ─────────────────────────────────────────
+   INFO PHOTO
+───────────────────────────────────────── */
+.info-photo {
+  margin-top: 48px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.info-photo-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ─────────────────────────────────────────
    PULL QUOTE
 ───────────────────────────────────────── */
 .section-quote {
