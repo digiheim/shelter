@@ -513,6 +513,19 @@ h2 em {
   object-fit: cover;
 }
 
+.info-video {
+  margin-top: 24px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.info-video-player {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /* ─────────────────────────────────────────
    PULL QUOTE
 ───────────────────────────────────────── */
